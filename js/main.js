@@ -4,6 +4,8 @@ const main = document.querySelector(".top-banner img");
 const nav = document.querySelector("nav ul")
 const cards = document.querySelector('.pricing-cards');
 const miniCards = document.querySelector('.choice-cards');
+const header = document.querySelector('header');
+const banner = document.querySelector('.home-container');
 
 
 
@@ -21,6 +23,24 @@ hamburger.addEventListener('click', function() {
     }
     nav.classList.toggle("toggle-left");
 });
+
+option = {
+    rootMargin: '-150px'
+};
+
+const menuDown = new IntersectionObserver(function(entries, menuDown){
+    entries.forEach(entry => {
+        console.log(entry)
+        if (!entry.isIntersecting) {
+            header.classList.add('header-clr');
+        }
+        else {
+            header.classList.remove('header-clr');
+        }
+    });
+}, option);
+
+menuDown.observe(banner);
 
 
 //******** Banner Animation
