@@ -84,6 +84,7 @@
   .nav {
     position: relative;
     --navclr: #17a2b8;
+    z-index: 999;
   }
 
   nav ul {
