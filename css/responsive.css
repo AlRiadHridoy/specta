@@ -79,6 +79,7 @@
   }
   .toggle-left {
     left: 0;
+    padding: 0;
   }
 
   .nav {
@@ -160,6 +161,9 @@
 }
 
 @media screen and (max-width: 500px) {
+  nav ul {
+    font-size: 1.1rem;
+  }
   .container {
     padding: 3rem 4rem;
   }
