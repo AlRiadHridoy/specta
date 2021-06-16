@@ -1,0 +1,206 @@
+@media screen and (max-width: 1224px) {
+  .col-md-3 {
+    padding: 4rem;
+  }
+}
+
+@media (min-width: 901px) and (max-width: 1024px) {
+  .intro h1 {
+    font-size: 2.6rem;
+  }
+
+  .intro h3 {
+    font-size: 1.3rem;
+  }
+
+  .choice-cards {
+    grid-template-columns: 90%;
+  }
+
+  .choice-cards p {
+    padding: 0 1rem;
+  }
+
+  .pricing-cards {
+    gap: 4rem;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  header ul li {
+    padding: calc(var(--spacing) / 2) 0.8rem;
+  }
+
+  .main {
+    padding: 2rem 5rem;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .main h1 {
+    margin-top: 6rem;
+  }
+
+  .main img {
+    width: 80%;
+  }
+
+  .choice-cards {
+    grid-template-columns: 90%;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .toggle {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    cursor: pointer;
+  }
+
+  .toggle div {
+    height: 3px;
+    width: 30px;
+    background-color: white;
+    transition: ease-in-out 0.25s;
+    -webkit-transition: ease-in-out 0.25s;
+  }
+
+  .middle {
+    opacity: 0;
+  }
+
+  .top {
+    transform: rotate(135deg);
+  }
+  .bottom {
+    transform: rotate(-135deg);
+    margin-top: -15px;
+  }
+  .toggle-left {
+    left: 0;
+  }
+
+  .nav {
+    position: relative;
+    --navclr: #17a2b8;
+  }
+
+  nav ul {
+    background-color: #242222;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: -100%;
+    height: 100vh;
+    width: 100%;
+    transition: ease 0.4s;
+    font-size: 1.2rem;
+  }
+
+  nav :is(ul, li, .btn) {
+    margin: 0;
+    gap: 1rem;
+  }
+
+  nav :is(li, .btn) {
+    padding: 2rem;
+    width: 50%;
+    transition: ease-in-out 0.25s;
+    text-align: center;
+  }
+
+  nav li:hover {
+    background-color: var(--navclr);
+    border-radius: 4px;
+  }
+
+  ul li::after {
+    display: none;
+  }
+
+  .btn {
+    display: inline-block;
+    background-color: var(--navclr);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .col-md-3 {
+    padding: 2.5rem;
+  }
+
+  .feature-items h4 {
+    font-size: 0.9rem;
+  }
+  :is(.choice-header, .service-header, .testimonial-header, .about, .contact, footer)
+    h2 {
+    font-size: 2.4rem;
+  }
+  .intro h1 {
+    font-size: 2.3rem;
+  }
+
+  .intro h3 {
+    font-size: 1.1rem;
+  }
+
+  .choice-cards p {
+    width: 100%;
+  }
+
+  .footer-list {
+    flex-direction: column;
+  }
+
+  .contact form {
+    min-width: 350px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .container {
+    padding: 3rem 4rem;
+  }
+
+  .col-md-3 > h2 {
+    font-size: 1.5rem;
+  }
+
+  :is(.choice-header, .service-header, .testimonial-header, .about, .contact, footer)
+    h2 {
+    font-size: 2.2rem;
+  }
+
+  :is(.choice-header, .service-header, .testimonial-header, .about, .contact, footer)
+    h3 {
+    font-size: 1rem;
+  }
+  .col-md-6 {
+    padding: 2rem 1rem;
+  }
+
+  .btn {
+    font-size: 0.8rem;
+  }
+
+  .col-md-6 P {
+    padding: 0 1rem;
+  }
+
+  form .info {
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+  }
+
+  .contact .info input {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .btn {
+    font-size: 0.8rem;
+  }
+}
