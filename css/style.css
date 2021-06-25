@@ -4,6 +4,7 @@
 :root {
   --comforta: "Comfortaa", cursive;
   --fntWeight: 400;
+  --zero: 0;
 
   /* colors */
   --clr1: #d4543d;
@@ -12,6 +13,7 @@
 * {
   margin: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 a {
@@ -49,13 +51,19 @@ body {
   cursor: pointer;
 }
 
+
+section {
+  padding-top: 2rem;
+}
+
+
+
 /***********************************************
 Header Area
 ************************************************/
 
 header {
   background-color: #163760;
-  /* background: #1e282e; */
   z-index: 999;
   position: fixed;
   left: 0;
@@ -87,7 +95,8 @@ ul li {
   padding: calc(var(--spacing) / 2) var(--spacing);
 }
 
-header li::after {
+
+header li a::after {
   background: #d4543d;
   position: absolute;
   content: "";
@@ -95,13 +104,28 @@ header li::after {
   right: var(--spacing);
   bottom: 0;
   height: 2px;
-  -webkit-transform: scale(0);
-  transform: scale(0);
-  transition: transform 150ms ease-in-out;
+  -webkit-transform: scale(var(--zero));
+  transform: scale(var(--zero));
   -webkit-transition: transform 150ms ease-in-out;
+  transition: transform 150ms ease-in-out;
 }
 
-ul li:hover::after {
+header li a.temp::after {
+  background: #d4543d;
+  position: absolute;
+  content: "";
+  left: var(--spacing);
+  right: var(--spacing);
+  bottom: 0;
+  height: 2px;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  -webkit-transition: transform 150ms ease-in-out;
+  transition: transform 150ms ease-in-out;
+}
+
+
+ul li a:hover::after {
   -webkit-transform: scale(1);
   transform: scale(1);
 }
@@ -134,6 +158,10 @@ header .btn:hover {
   background: var(--clr1);
   opacity: 0.8;
 }
+
+
+
+
 
 /***********************************************
 Banner
@@ -232,6 +260,10 @@ Sevice Area
   flex-wrap: wrap;
 }
 
+.regular, .standard, .premium {
+  opacity: 0;
+}
+
 .col-md-3 > h4,
 .speed h4 {
   padding: 0;
@@ -252,7 +284,6 @@ Sevice Area
   border-radius: 5px;
   -webkit-transition: transform 0.3s ease-in-out;
   transition: transform 0.3s ease-in-out;
-  opacity: 0;
 }
 
 .col-md-3:hover {
@@ -324,7 +355,7 @@ Choice Area
   -webkit-transition: transform 0.3s ease-in-out;
   border: 1px solid transparent;
   opacity: 0;
-  max-width: 400px;
+  max-width: 450px;
 }
 
 .col-md-6:hover {
