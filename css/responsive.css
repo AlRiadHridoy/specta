@@ -85,7 +85,6 @@
   .nav {
     position: relative;
     --navclr: #17a2b8;
-    z-index: 999;
   }
 
   nav ul {
@@ -205,8 +204,12 @@
   }
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 360px) {
   .btn {
-    font-size: 0.8rem;
+    font-size: 0.7rem;
+  }
+
+  .contact {
+    display: none;
   }
 }
