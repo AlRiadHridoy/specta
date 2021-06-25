@@ -2,7 +2,7 @@
 const hamburger = document.querySelector('.toggle');
 const main = document.querySelector(".top-banner img");
 const nav = document.querySelector("nav ul")
-const navChild = document.querySelectorAll("nav ul li");
+const navAnchor = document.querySelectorAll("nav ul li a");
 const cards = document.querySelector('.pricing-cards');
 const miniCards = document.querySelector('.choice-cards');
 const header = document.querySelector('header');
@@ -31,9 +31,9 @@ for (let element of nav.children) {
     });
 };
 
-navChild.forEach(ele => {
+navAnchor.forEach(ele => {
     ele.addEventListener('click', function(){
-        navChild.forEach(li => li.classList.remove('temp'));
+        navAnchor.forEach(li => li.classList.remove('temp'));
         ele.classList.add('temp');
     })
 })
