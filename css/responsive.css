@@ -103,9 +103,13 @@
     margin: 0;
     gap: 1rem;
   }
+  nav li a {
+    width: 100%;
+    display: block;
+    padding: 2rem;
+  }
 
   nav :is(li, .btn) {
-    padding: 2rem;
     width: 50%;
     transition: ease-in-out 0.25s;
     text-align: center;
@@ -116,12 +120,14 @@
     border-radius: 4px;
   }
 
-  ul li::after {
+  ul li a::after {
     display: none;
   }
 
-  .btn {
-    display: inline-block;
+  nav .btn {
+    padding: 2rem;
+  }
+  nav .btn:hover {
     background-color: var(--navclr);
   }
 }
@@ -163,9 +169,6 @@
   nav ul {
     font-size: 1.1rem;
   }
-  .container {
-    padding: 3rem 4rem;
-  }
 
   .col-md-3 > h2 {
     font-size: 1.5rem;
@@ -183,6 +186,7 @@
   .col-md-6 {
     padding: 2rem 1rem;
     min-width: 300px;
+    margin: .5rem;
   }
 
   .btn {
@@ -205,6 +209,9 @@
 }
 
 @media screen and (max-width: 360px) {
+  nav :is(li, .btn) {
+    width: 60%;
+  }
   .btn {
     font-size: 0.7rem;
   }
@@ -212,4 +219,11 @@
   .contact {
     display: none;
   }
+  .container {
+    padding: 3rem 2rem;
+  }
+
+  .col-md-6 {
+  min-width: 280px;
+}
 }
