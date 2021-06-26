@@ -54,7 +54,7 @@ body {
 
 
 section {
-  padding-top: 2rem;
+  padding-top: 5rem;
 }
 
 
@@ -91,7 +91,7 @@ ul {
   font-weight: var(--fntWeight);
 }
 
-ul li a{
+ul li a, footer li {
   position: relative;
   padding: calc(var(--spacing) / 2) var(--spacing);
 }
