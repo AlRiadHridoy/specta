@@ -53,7 +53,7 @@ body {
 }
 
 
-section {
+section:not(:nth-of-type(1)) {
   padding-top: 5rem;
 }
 
@@ -243,6 +243,8 @@ Sevice Area
 :is(.choice, .service) h3 {
   font-size: 1.1rem;
   line-height: 1.6;
+  width: 80%;
+  margin: 0 auto;
 }
 
 /***************  Pricing Cards  ***************/
@@ -328,6 +330,9 @@ Sevice Area
   padding: 0.8rem 0;
 }
 
+
+
+
 /***********************************************
 Choice Area
 ************************************************/
@@ -341,6 +346,7 @@ Choice Area
   justify-content: center;
   place-items: center;
 }
+
 .choice-cards img {
   padding: 0;
 }
@@ -362,6 +368,9 @@ Choice Area
   border: 1px solid #009270;
   border-radius: 8px;
 }
+
+
+
 
 /***********************************************
 Testimonial
