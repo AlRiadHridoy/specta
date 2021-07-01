@@ -97,7 +97,7 @@ ul li a, footer li {
 }
 
 
-header li a::after, header li a.temp::after {
+header li a::after, header li a.active::after {
   background: #d4543d;
   position: absolute;
   content: "";
@@ -111,7 +111,7 @@ header li a::after, header li a.temp::after {
   transition: transform 150ms ease-in-out;
 }
 
-header li a.temp::after {
+header li a.active::after {
   -webkit-transform: scale(1);
   transform: scale(1);
 }
@@ -243,8 +243,6 @@ Sevice Area
 :is(.choice, .service) h3 {
   font-size: 1.1rem;
   line-height: 1.6;
-  width: 80%;
-  margin: 0 auto;
 }
 
 /***************  Pricing Cards  ***************/
@@ -258,9 +256,6 @@ Sevice Area
   flex-wrap: wrap;
 }
 
-.regular, .standard, .premium {
-  opacity: 0;
-}
 
 .col-md-3 > h4,
 .speed h4 {
@@ -357,7 +352,6 @@ Choice Area
   transition: transform 0.3s ease-in-out;
   -webkit-transition: transform 0.3s ease-in-out;
   border: 1px solid transparent;
-  opacity: 0;
   max-width: 450px;
 }
 
@@ -369,7 +363,10 @@ Choice Area
   border-radius: 8px;
 }
 
-
+.choice h3 {
+  margin: 0 auto;
+  width: 80%;
+}
 
 
 /***********************************************
@@ -549,6 +546,11 @@ footer li:hover {
 footer svg {
   color: white;
 }
+
+.fade {
+  opacity: 0;
+}
+
 
 /*///////////////////////////  Animations  ///////////////////////////*/
 
