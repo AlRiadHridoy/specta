@@ -93,5 +93,3 @@ for (let child of arrElement) {
     observer.observe(element);
   }
 }
-
-
